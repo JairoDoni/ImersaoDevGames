@@ -1,0 +1,20 @@
+{
+  "name": "ImersaoDevGames",
+  "version": "1.0.0",
+  "description": "Um projeto de jogos em javascript desenvolvidos durante as aulas gratuitas propocionadas pela Alura por uma semana.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JairoDoni/ImersaoDevGames.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JairoDoni/ImersaoDevGames/issues"
+  },
+  "homepage": "https://github.com/JairoDoni/ImersaoDevGames#readme"
+}
