@@ -16,5 +16,6 @@
   "bugs": {
     "url": "https://github.com/JairoDoni/ImersaoDevGames/issues"
   },
-  "homepage": "https://github.com/JairoDoni/ImersaoDevGames#readme"
+  "homepage": "https://github.com/JairoDoni/ImersaoDevGames#readme",
+  "devDependencies": {}
 }
