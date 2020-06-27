@@ -19,6 +19,7 @@ class Animacao{
       this.matriz[this.frameAtual] [1], 
       this.larguraSprite, this.alturaSprite);
       this.anima();
+      
     }
     anima(){
       this.frameAtual++;
