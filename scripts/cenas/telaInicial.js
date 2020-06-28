@@ -12,10 +12,22 @@ class TelaInicial {
   _texto(){
     textFont(fontTelaInicial);
     textAlign(CENTER);
-    textSize(55);
-    text('As aventuras de', width / 2, height / 3);
-    textSize(150);
-    text('Hipsta', width / 2, height / 5 * 3);
+    
+    if (window.matchMedia("(min-width:1000px)").matches) {
+      textSize(55);
+      text('As aventuras de', width / 2, height / 3);
+    } else {
+      textSize(35);
+      text('As aventuras de', width / 2, height / 3);
+    }
+    
+    if (window.matchMedia("(min-width:1000px)").matches) {
+      textSize(150);
+      text('Hipsta', width / 2, height / 5 * 3);
+    } else {
+      textSize(70);
+      text('Hipsta', width / 2, height / 5 * 3);
+    }
   }
 
   _botao(){

@@ -9,14 +9,14 @@ class Jogo {
     vida = new Vida(fita.configuracoes.vidaMaxima, 
     fita.configuracoes.vidaInicial);
     personagem = new Personagem(
-      matrizPresonagem,
+      matrizPresonagemAnjo,
       imgPersonagem,
       0,
-      30,
-      110,
-      135,
-      220,
-      270
+      10,
+      200,
+      200,
+      400,
+      400
     );
     const inimigo = new Inimigo(
       matrizInimigo,

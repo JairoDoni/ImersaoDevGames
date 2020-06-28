@@ -2,7 +2,7 @@ let jogo;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  frameRate (40);
+  frameRate (35);
   jogo = new Jogo();
   jogo.setup();
   telaInicial = new TelaInicial;

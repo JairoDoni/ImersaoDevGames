@@ -14,15 +14,27 @@ canvas {
   padding: 1rem 1.25rem;
   font-size: 1.5rem;
   letter-spacing: .25rem;
-  box-shadow: 2px 2px 0px 1px #4a4c69;
+  box-shadow: 2px 2px 0px 1px #23058d;
+  /* box-shadow: 2px 2px 0px 1px #4a4c69; */
   text-transform: uppercase;
-  background-color: #8386b5;
+  background-color: #522cbb;
+  /* background-color: #8386b5; */
   border: none;
   border-radius: .75rem;
   color: #fff;
 }
 
 .botao-tela-inicial:hover {
-  background-color: #fcd9bd;
-  box-shadow: 2px 2px 0px 1px #fcb174;
+  background-color: #bdaaf1;
+  box-shadow: 2px 2px 0px 1px #5f41af;
+  color: #522cbb;
+  /* background-color: #fcd9bd;
+  box-shadow: 2px 2px 0px 1px #fcb174; */
+}
+
+@media (max-width : 800px) {
+  .botao-tela-inicial {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
 }
