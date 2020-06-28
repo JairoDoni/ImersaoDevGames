@@ -10,10 +10,10 @@ function preload() {
   
   fontTelaInicial = loadFont("imagens/assets/fonteTelaInicial.otf");
 
-  somAmbiente = loadSound("../sons/Grimm.mp3");
-  somPulo = loadSound("../sons/somPulo.mp3");
-  somGameOver = loadSound("../sons/morteJogoZelda.mp3");
-  soundButton = loadSound("../sons/start.mp3");
+  somAmbiente = loadSound("sons/Grimm.mp3");
+  somPulo = loadSound("sons/somPulo.mp3");
+  somGameOver = loadSound("sons/morteJogoZelda.mp3");
+  soundButton = loadSound("sons/start.mp3");
 
-  fita = loadJSON("../fita/fita.json");
+  fita = loadJSON("fita/fita.json");
 }
