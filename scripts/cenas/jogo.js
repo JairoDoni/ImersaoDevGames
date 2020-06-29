@@ -23,8 +23,8 @@ class Jogo {
       imgInimigo,
       width - 52,
       30,
-      52,
-      52,
+      140,
+      140,
       104,
       104,
       10,
@@ -34,10 +34,10 @@ class Jogo {
       imgInimigoVoador,
       width - 52,
       200,
-      100,
-      75,
-      200,
       150,
+      150,
+      100,
+      100,
       10,
     );
     const inimigoGrande = new Inimigo(
@@ -45,8 +45,8 @@ class Jogo {
       imgInimigoGrande,
       width,
       0,
-      200,
-      200,
+      225,
+      225,
       400,
       400,
       15,
@@ -95,7 +95,7 @@ class Jogo {
       vida.perdeVida();
       personagem.tornarInvencivel();
       if (vida.vidas === 0 ) {
-        image(imgGameOver, width / 2 - 206, height / 2 - 90);
+        image(imgGameOver, width / 2 - 270, height / 2 - 120);
         noLoop();
         somPulo = null; 
         somAmbiente.stop();

@@ -10,6 +10,7 @@ class Pontuacao{
   }
 
   adicionarPonto(){
+    textFont(fontTelaInicial);
     this.pontos = this.pontos + 0.2;
   }
 }

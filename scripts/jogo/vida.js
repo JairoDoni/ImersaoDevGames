@@ -25,7 +25,7 @@ class Vida {
      }
   }
   perdeVida(){
-    
     this.vidas--;
+    soundLoseLife.play();
   }
 }
