@@ -1,36 +1,37 @@
-let imgCenario;
-let imgPersonagem;
-let imgInimigo;
-let imgInimigoGrande;
-let imgInimigoVoador;
-let imgVida;
-let imgTelaInicial;
+let imgScenario;
+let imgCharacter;
+let imgEnemy;
+let imgBigEnemy;
+let imgFlyingEnemy;
+let imgLife;
+let imgMenu;
 let titleFirstScreen;
-let fontTelaInicial;
+
 let imgGameOver;
 let somGameOver;
-let somPulo;
+let soundJump;
 let soundButton;
 let soundLoseLife;
+let soundMenu;
 
-let cenaAtual = 'telaInicial';
-let cenas;
-let telaInicial;
-let botaoGerenciador;
-let vida;
-let mapa = [];
+let currentScene = 'menu';
+let scenes;
+let menu;
+let managerButton;
+let life;
+let map = [];
 let fita;
 
-let cenario;
-let somAmbiente;
-let personagem;
-let inimigo;
-let inimigoGrande;
-let inimigoVoador;
-let pontuacao;
+let scenario;
+let soundAmbient;
+let character;
+let enemy;
+let bigEnemy;
+let flyingEnemy;
+let points;
 
 
-const matrizPresonagem = [
+const matrixCharacter = [
   [0, 0],
   [220, 0],
   [440, 0],
@@ -48,7 +49,7 @@ const matrizPresonagem = [
   [440, 810],
   [660, 810],
 ];
-const matrizPresonagemAnjo = [
+const matrixCharacterAngel = [
   [0, 0],
   [400, 0],
   [800, 0],
@@ -74,7 +75,7 @@ const matrizPresonagemAnjo = [
   [800, 2000],
   [1200, 2000],
 ];
-const matrizInimigo = [
+const matrixEnemy = [
   [0, 0],
   [105, 0],
   [210, 0],
@@ -84,7 +85,7 @@ const matrizInimigo = [
   [210, 100],
   [315, 100],
 ];
-const matrizInimigoGrande = [
+const matrixBigEnemy = [
   [0, 0],
   [400, 0],
   [800, 0],
@@ -110,7 +111,7 @@ const matrizInimigoGrande = [
   [800, 2000],
   [1200, 2000],
 ];
-const matrizInimigoVoador = [
+const matrixFlyingEnemy = [
   [0, 0],
   [115, 0],
   [230, 0],
@@ -120,4 +121,4 @@ const matrizInimigoVoador = [
   [230, 100],
   [345, 100],
 ];
-const inimigos = [];
+const enemys = [];
