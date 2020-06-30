@@ -9,7 +9,7 @@ function preload() {
   imgGameOver = loadImage("imagens/assets/gameover02.png");
   titleFirstScreen = loadImage("imagens/assets/title.png");
 
-  soundMenu = loadSound("../sons/castlevania.mp3");
+  soundMenu = loadSound("sons/castlevania.mp3");
   soundAmbient = loadSound("sons/Grimm.mp3");
   soundButton = loadSound("sons/start.mp3");
   soundJump = loadSound("sons/somPulo.mp3");
