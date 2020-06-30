@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
 @font-face{
-  font-family: "Gameplay";
-  src: url('fonts/Gameplay.ttf');
-  /* font-family: "Joystix Monospace";
-  src: url('fonts/joystix.ttf'); */
+  /* font-family: "Gameplay";
+  src: url('fonts/Gameplay.ttf'); */
+  font-family: "Joystix Monospace";
+  src: url('fonts/joystix.ttf');
 }
 html, body {
   margin: 0;
@@ -16,8 +16,8 @@ canvas {
 /* cursive */
 /* Joystix Monospace */
 .botao-tela-inicial {
-  font-family: "Gameplay"; 
-  /* font-family: "Joystix Monospace";  */
+  /* font-family: "Gameplay";  */
+  font-family: "Joystix Monospace"; 
   font-weight: 500;
   padding: 1rem 1.25rem;
   font-size: 1.1rem;

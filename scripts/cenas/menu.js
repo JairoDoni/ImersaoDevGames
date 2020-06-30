@@ -1,12 +1,14 @@
-class TelaInicial {
+class Menu {
   constructor(){}
   draw() {
     this._imagemDeFundo();
     this._texto();
     this._botao();
+    
   }
   _imagemDeFundo(){
-    image(imgTelaInicial, 0, 0, width, height);
+    image(imgMenu, 0, 0, width, height);
+    
   }
 
   _texto(){
@@ -16,8 +18,8 @@ class TelaInicial {
   }
 
   _botao(){
-    botaoGerenciador.y = height / 7 * 5;
-    botaoGerenciador.draw();
+    managerButton.y = height / 7 * 5;
+    managerButton.draw();
   }
   
 }

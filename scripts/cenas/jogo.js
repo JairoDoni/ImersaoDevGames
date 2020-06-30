@@ -1,16 +1,16 @@
 class Jogo {
   constructor() {
     this.indice = 0;
-    this.mapa = fita.mapa;
+    this.map = fita.map;
   }
   setup() {
-    cenario = new Cenario(imgCenario, 3);
-    pontuacao = new Pontuacao();
-    vida = new Vida(fita.configuracoes.vidaMaxima, 
-    fita.configuracoes.vidaInicial);
-    personagem = new Personagem(
-      matrizPresonagemAnjo,
-      imgPersonagem,
+    scenario = new Scenario(imgScenario, 3);
+    points = new Points();
+    life = new Life(fita.configuracoes.maxLife, 
+    fita.configuracoes.initialLife);
+    character = new Character(
+      matrixCharacterAngel,
+      imgCharacter,
       0,
       10,
       200,
@@ -18,9 +18,9 @@ class Jogo {
       400,
       400
     );
-    const inimigo = new Inimigo(
-      matrizInimigo,
-      imgInimigo,
+    const enemy = new Enemy(
+      matrixEnemy,
+      imgEnemy,
       width - 52,
       30,
       140,
@@ -29,9 +29,9 @@ class Jogo {
       104,
       10,
     );
-    const inimigoVoador = new Inimigo(
-      matrizInimigoVoador,
-      imgInimigoVoador,
+    const flyingEnemy = new Enemy(
+      matrixFlyingEnemy,
+      imgFlyingEnemy,
       width - 52,
       200,
       150,
@@ -40,9 +40,9 @@ class Jogo {
       100,
       10,
     );
-    const inimigoGrande = new Inimigo(
-      matrizInimigoGrande,
-      imgInimigoGrande,
+    const bigEnemy = new Enemy(
+      matrixBigEnemy,
+      imgBigEnemy,
       width,
       0,
       225,
@@ -52,54 +52,54 @@ class Jogo {
       15,
     );
 
-    inimigos.push(inimigo);
-    inimigos.push(inimigoGrande);
-    inimigos.push(inimigoVoador);
+    enemys.push(enemy);
+    enemys.push(bigEnemy);
+    enemys.push(flyingEnemy);
   }
   keyPressed(key) {
     if (key === ' ') {
-      personagem.pula();
-      somPulo.play();
+      character.pula();
+      soundJump.play();
     }
   }
 
   draw() {
-    cenario.exibe();
-    cenario.move();
+    scenario.exibe();
+    scenario.move();
     
-    vida.draw();
-    pontuacao.exibe();
-    pontuacao.adicionarPonto();
+    points.exibe();
+    points.adicionarPonto();
     
-    personagem.exibe();
-    personagem.AplicaGravidade();
+    life.draw();
+    character.exibe();
+    character.AplicaGravidade();
     
-    const linhaAtual = this.mapa[this.indice];
-    const inimigo = inimigos[linhaAtual.inimigo];
-    const inimigoVisivel = inimigo.x < - inimigo.largura;
+    const linhaAtual = this.map[this.indice];
+    const enemy = enemys[linhaAtual.enemy];
+    const visibleEnemy = enemy.x < - enemy.largura;
 
-    inimigo.velocidade = linhaAtual.velocidade;
+    enemy.velocidade = linhaAtual.velocidade;
 
-    inimigo.exibe();
-    inimigo.move();
-    if (inimigoVisivel) {
+    enemy.exibe();
+    enemy.move();
+    if (visibleEnemy) {
       this.indice++;
-      inimigo.aparece();
-      if (this.indice > this.mapa.length - 1) {
+      enemy.aparece();
+      if (this.indice > this.map.length - 1) {
         this.indice = 0;
       }
     }
 
-    if (personagem.estaColidindo(inimigo)) {
+    if (character.estaColidindo(enemy)) {
       
-      vida.perdeVida();
-      personagem.tornarInvencivel();
-      if (vida.vidas === 0 ) {
+      character.tornarInvencivel();
+      life.perdeVida();
+      if (life.lifes === 0 ) {
         image(imgGameOver, width / 2 - 270, height / 2 - 120);
         noLoop();
-        somPulo = null; 
-        somAmbiente.stop();
-        somGameOver.play();
+        soundJump = null; 
+        soundAmbient.stop();
+        soundGameOver.play();
       }
     }
   }

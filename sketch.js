@@ -5,19 +5,19 @@ function setup() {
   frameRate (40);
   jogo = new Jogo();
   jogo.setup();
-  telaInicial = new TelaInicial;
-  cenas = {
-    telaInicial,
+  menu = new Menu;
+  scenes = {
+    menu,
     jogo,
   };
-  botaoGerenciador = new BotaoGerenciador('Start', width / 2, height / 2);
+  managerButton = new ManagerButton('Start', width / 2, height / 2);
+  
 }
 
 function keyPressed() {
-  
   jogo.keyPressed(key);
 }
 
 function draw() {
-  cenas[cenaAtual].draw();
+  scenes[currentScene].draw();
 }
