@@ -13,7 +13,7 @@ class Menu {
 
   _texto(){
     
-    image(titleFirstScreen, width / 2 - 206, height / 7 * 2);
+    image(titleFirstScreen, width / 2 - 200, height / 7 * 1.5);
  
   }
 
