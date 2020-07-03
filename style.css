@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+}
 
 @font-face{
-  /* font-family: "Gameplay";
-  src: url('fonts/Gameplay.ttf'); */
+  font-family: "Gameplay";
+  src: url('fonts/Gameplay.ttf');
   font-family: "Joystix Monospace";
   src: url('fonts/joystix.ttf');
 }
 html, body {
   margin: 0;
   padding: 0;
+  background: #5f41af;
+  width: 100%;
+  height: 100%;
 }
 canvas {
+  z-index: 1;
   display: block;
 }
 /* cursive */
@@ -39,6 +47,39 @@ canvas {
   /* background-color: #fcd9bd;
   box-shadow: 2px 2px 0px 1px #fcb174; */
 }
+
+/* .header{
+  font-family: "Roboto"; 
+  
+  background: #333333;
+  color: #f7f7f7;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10px;
+} */
+
+/* .timeline{
+  background: #f7f7f7;
+  width: 72%;
+  height: 100%;
+  border: 2px solid  red;
+  margin:0 auto;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+}
+
+ .game{
+  z-index: 1;
+  background: #f7f7f7;
+  width: 90%;
+  height: 500px;
+
+} */
 
 @media (max-width : 800px) {
   .botao-tela-inicial {

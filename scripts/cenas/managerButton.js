@@ -6,7 +6,7 @@ class ManagerButton{
     this.botao =  createButton(this.texto);
     this.botao.mousePressed(() => this._alteraCena());
     this.botao.addClass("botao-tela-inicial");
-    soundMenu.loop();
+    // soundMenu.loop();
   }
   draw(){
     this.botao.position(this.x, this.y);
