@@ -8,5 +8,6 @@ Um culto de feiticeiros malignos se reúnem em um castelo abandonado, planejando
 
 
 #### [**DEMO**][demo]
+☝️
 
 [demo]: https://jairodoni.github.io/ImersaoDevGames/
